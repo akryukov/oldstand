@@ -1,0 +1,301 @@
+FONTLOG
+Old Standard font family
+========================
+
+This file provides detailed information on the Old Standard family of
+fonts. This information should be distributed along with the Old Standard
+fonts and any derivative works.
+
+Basic Font Information
+----------------------
+
+The Old Standard font family is an attempt to revive a specific type of
+Modern (classicist) style of serif typefaces, very commonly used in various
+editions printed in the late 19th and early 20th century, but almost
+completely  abandoned later. Although contemporary typographers often
+consider this lettertype obsolete and out-of-fashion, it still has at least
+two advantages:
+
+-- The classicist style still can be considered a good choice for
+typesetting scientific papers, especially on social and humanitarian
+sciences, as its specific features are closely associated in the people's
+eyes with old books they learned on;
+
+-- the most beautiful examples of Greek and Cyrillic lettertypes were all
+based on the Modern style, so that for those scripts "Modern" fonts
+are much more appropriate than any contemporary (e. g. Times-based)
+designs.
+
+That's why the Old Standard font family has two main purposes: it is
+intended to be used as a specialized font for philologists (mainly
+classicists, germanists and slavists) and also as a general-purpose font
+for typesetting various  editions in languages which use Greek or Cyrillic
+script. For this reason Old Standard provides glyphs for a wide range of
+Latin, Greek and Cyrillic characters.
+
+The name "Old Standard" was selected as opposed to the "Obyknovennaya
+Novaya" ("New Standard") typeface, widely used in the Soviet typography,
+which represents another, slightly different type of the same Modern style.
+The digital version of this font is now available from Paratype
+(http://www.paratype.ru). Of course this name doesn't look very original,
+but it seems to be a good choice for a revival of the most common
+lettertype of the early 20th century.
+
+ChangeLog
+---------
+2011 April 30 (Alexey Kryukov) Version 2.2
+
+    * Latin Extended Additional (again, except Vietnamese and medievalist additions)
+      for Bold and Italic.
+
+    * More punctuation characters, including New Testament critical signs.
+
+    * New implementation for the 'frac' feature: it is now possible to build
+      any arbitrary fractions rather than just those available in Unicode in the
+      precomposed form.
+
+    * SIL's Graphite rendering technologie is now supported. The features available
+      are mostly the same as for OpenType, but there are some additions (in
+      particular it is possible to render a Greek text with accents above capitals).
+      The manual has also been changed to reflect the new functionality.
+
+    * Cosmetic glyph changes (foots/arms in Cyrillic 'Ka', 'Zhe', 'Ya' in
+      particular).
+
+    * Added human-readable stylistic set names (US English only) and style
+      (sub-family) names in a few additional languages.
+
+    * The fonts are now available also in the WOFF format to simplify embedding
+      into web pages.
+
+2009 November 18 (Alexey Kryukov) Version 2.1 (not released)
+
+    * The "Greek and Coptic" Unicode range is now fully covered, except Coptic
+      letters. The epigraphic letters have been implemented in a simple sans-serif
+      style: I don't like "creativity" if it can result in producing urecognizable
+      glyphs.
+
+    * Regular and bold: New alternate glyphs for Cyrillic IE (U+0415/U+0435) and
+      Ukrainian IE (U+0404/U+0454), used by default for Church Slavonic. The intent
+      is to make Old Cyrillic YEST clearly distinguishable both from Latin E and
+      "wide" YEST.
+
+    * New glyphs for CYRILLIC SMALL LETTER MONOGRAPH UK (in all 3 styles).
+
+    * I have implemented a k-shaped kappa in all three styles, a script rho in
+      regular and bold and a rho with straignt tail in italic. These characters
+      (except the script rho) are kept unencoded and can be accessed via the 'mgrk'
+      feature tag. I don't think they would be very useful, but at least it is now
+      possible to use Old Standard for typesetting a copy of the Unicode Greek
+      codechart (I needed one for a book I was preparing).
+
+    * Multiple cosmetic glyph changes. In particular Latin capital "C", "E", "F",
+      "G", "L" and related glyphs have got heavier vertical serifs in the regular font.
+      Cedilla is redesigned (once again) in regular and bold. Shapes of some Greek
+      letters (including alternate beta and theta) have also been improved.
+
+    * I no longer use custom PUA mappings. I have preserved PUA codepoints for
+      a few standard glyphs (including capital accents) previously mapped there
+      by Adobe, as well as for additional accented Greek characters implemented
+      for compatibility with Ralph Hancock's fonts. Everything else has been moved
+      outside the encoding.
+
+    * Oops. I was wrong regarding "zhe with breve": this letter actually
+      should be formed with a standard (Latin) breve rather than a Cyrillic
+      telephone receiver-like accent. BTW I think rhis letter should be
+      available in the font: since I already support historical Romanian
+      characters, the modern Moldavian Cyrillic alphabet should be supported
+      as well.
+
+    * The regular font now includes most accented characters from the
+      Latin Extended Additional range (but not Vietnamese).
+
+2008 November 18 (Alexey Kryukov) Version 2.0
+
+    * A bold version is now available!
+
+    * Added a full set of historical Cyrillic characters, as defined
+      in Unicode 5.1;
+
+    * Implemented Roman numerals and ancient Roman epigraphic letters
+      (including Claudian letters).
+
+    * Switched to lookup-based representation of the OpenType data
+      in the source files to conform the new FontForge's file format;
+
+    * Now both cubic and quadratic versions of the font outlines are stored
+      in the same source files (one file for each style), as FontForge's
+      new approach to multilayered fonts allows this;
+
+    * Switched to OFL version 1.1;
+
+    * FontForge now can generate reasonably good TTF instructions (it
+      could not when OldStandard v. 1.0 was released). So the TTF fonts
+      are now automatically instructed with FontForge. I still include
+      the old instructions for the regular version (prepared with
+      Peter Baker's xgridfit utility) into the source package, but they
+      are no longer used in the font itself. This certainly makes some
+      glyphs look worse, but improves the overall performance of the font
+      (especially in the antialiased mode);
+
+    * Danish Aringacute redesigned (now has the acute at the top of the ring
+      and a specially designed, reduced in size, diacritic for the capital
+      glyph);
+
+    * Redesigned cedilla and all combinations with this accent in the upright
+      font;
+
+    * More contour cleanup;
+
+    * Added accented combinations with "W" for Welsh;
+
+    * Added several new math characters to the regular font. The intent was
+      to fully cover the TeX OMS encoding, but this task is still far from
+      being reached;
+
+    * There is now a dedicated Unicode codepoint for capital insular "G"
+      (U+A77D), so move the corresponding glyph to that location;
+
+    * Corrected the shape of Greek symbol phi (U+03D5). It is still not
+      recommended to use this glyph instead of the normal (looped) form;
+
+    * Several new characters have been added, including the Latin letter EZH
+      (U+01B7/U+0292) and capital Es Zett for German (U+1E9E). There are
+      some new combining marks as well;
+
+    * I used to consider the breve accent should always take the typically
+      Cyrillic form when used after Cyrillic letters. However this assumption
+      seems to be wrong: the specific form of the diacritic is actually
+      an attribute of just three letters, i. e. "short i" (Russian etc.),
+      "Short u" (Byelorussian) and "zhe with breve" (Moldavian).
+
+2007 July 14 (Alexey Kryukov) Version 1.1 (not released)
+
+    * Added Latin letters OPEN E and OPEN O, requested by an African user;
+
+    * New glyph for ampersand in the upright font;
+
+    * Redesigned Polish ogonek and Czech comma-like caron;
+
+    * More work on italic Greek letters;
+
+    * General contour cleanup for some glyphs.
+
+2007 January 22 (Alexey Kryukov) Version 1.0
+
+    * Added the WHITE SQUARE (U+25A1) character;
+
+    * Minor corrections in the fonts themselves and in the PDF manual.
+
+2006 December 12 (Alexey Kryukov) Version 0.9
+
+    * Added a few more Latin Extended-B characters, yogh and wynn in
+      particular (thanks to Peter Baker for the valuable information on the
+      design of the letter yogh he provided). I also have implemented
+      uppercase and lowercase versions of the insular "g". Thus Old
+      Standard is now suitable for typesetting texts in Old and Middle
+      English.
+
+    * Added Hebrew aleph and a few Fraktur characters, useful for critical
+      apparatus, especially in Bible/New Testament editions.
+
+    * Implemented a full set of standard f-ligatures, present in most
+      OpenType fonts.
+
+    * Andrew Panov has convinced me to implement a set of mathematical
+      glyphs, designed in the style of traditional Russian math
+      typesetting. These glyphs are currently available only in the regular
+      version of the font.
+
+    * A PDF manual, explaining various features of the font, is now
+      available.
+
+    * Greek sampi (both uppercase and lowercase) has been redesigned.
+
+    * Implemented Greek lunate epsilon and reversed lunate epsilon (the
+      design doesn't match the remaining Greek letters though). Thus all
+      Unicode slots intended for "alternate" and mathematical Greek glyphs
+      are now covered.
+
+    * A few improvements in the TTF instructions for the regular font
+      (drop-out control has been enabled).
+
+    * Several minor corrections in the OpenType layouts.
+
+2006 October 01 (Alexey Kryukov) Version 0.8
+
+    * Implemented a set of TrueType instructions (hints) for the regular
+      font (italics are still unhinted). I would like to thank Peter Baker
+      for his excellent (and extremely well documented) xgridfit program
+      (http://xgridfit.sourceforge.net), which provides a good Open Source
+      solution for gridfitting, or "hinting," TrueType fonts.
+
+    * The TrueType version of the regular font now has a separate source
+      file (OldStandard.ttf.sfd) with quadratic splines.
+
+    * Changed the naming convention for the TrueType version: the font name
+      now has a "TT" suffix, so that both TTF and OTF versions can be
+      installed on the same system simultaneously.
+
+    * Added a few Latin Extended-B characters, useful mainly for
+      germanists, in particular "b" with bar, "o" with ogonek and hwair.
+      Also I have corrected shapes of lowercase eth and thorn. Thus Old
+      Standard now includes all characters necessary for representing Old
+      Icelandic texts and Gothic transliteration. Still more characters
+      (the most important of them being uppercase and lowercase yogh) are
+      needed for a proper support of Old/Middle English.
+
+    * As usual, a few minor bugs have been corrected.
+
+2006 June 09 (Alexey Kryukov) Version 0.7
+
+    * Added OpenType layouts for Latin, Greek and Cyrillic. Special
+      attention has been paid to correct shaping and positioning of
+      diacritical marks.
+
+    * Minor corrections of glyph shapes.
+
+2006 May 08 (Alexey Kryukov) Version 0.6
+
+    * License changed to the SIL Open Font License.
+
+    * Added Greek glyphs, including those in the U+1F00--U+1FFF "Greek
+      Extended" Unicode range.
+
+    * Ukrainian and Serbian Cyrillic glyphs were redesigned in order to
+      bring them into a better correspondance with real examples of
+      the early 20th century printing.
+
+    * The standard mathematical operation signs were redesigned and
+      significantly enlarged, so that now their implementation contradicts
+      to the contemporary standards, but better corresponds to the European
+      tradition of math typesetting.
+
+    * Several additional math characters, needed to provide a full coverage
+      for the Mac Roman encoding, have been added.
+
+    * Ancient Greek metrical characters (U+23D1--U+23D9) have been
+      implemented.
+
+    * A TTF version is released in addition to OpenType-CFF fonts. It has
+      no hinting at all, so don't complain for bad screen rendering!
+
+2006 Feb 14 (Alexey Kryukov) Version 0.2
+
+    * First public release.
+
+Acknowledgements
+----------------
+(Here is where contributors can be acknowledged. If you make modifications
+be sure to add your name (N), email (E), web-address (W) and description
+(D). This list is sorted by last name in alphabetical order.)
+
+N: Alexey Kryukov
+E: alexios@thessalonica.org.ru
+W: http://www.thessalonica.org.ru
+D: Original Designer of Latin, Greek and Cyrillic glyphs
+
+For more information please visit the Fonts page on Thessalonica's
+website: http://www.thessalonica.org.ru/en/fonts.html.
+
+Or send an email to <alexios at thessalonica dot org dot ru>.
